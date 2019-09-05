@@ -1,6 +1,6 @@
 const express = require('express');
 
-function main() {
+function main () {
   let server = express();
 
   // TODO: Basic Auth
