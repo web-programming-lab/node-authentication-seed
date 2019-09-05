@@ -9,7 +9,6 @@
   },
   "keywords": [
     "node",
-    "jwt",
     "auth"
   ],
   "devDependencies": {
