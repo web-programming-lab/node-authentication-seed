@@ -1,12 +1,10 @@
 const express = require('express');
+const server = express();
 
-function main() {
-  let server = express();
+server.get('/heroes', (req, res) => {
+  res.send([{ name: 'Superman' }]);
+});
 
-  // TODO: Basic Auth
-
-  const port = process.env.PORT || 8000;
-  server.listen(port, () => console.log(`Server is listening on port: ${port}`));
-}
-
-main();
+server.listen(4566, () => {
+  console.log('a server with express is running....');
+});
