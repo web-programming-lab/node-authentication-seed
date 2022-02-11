@@ -2,8 +2,6 @@ const express = require('express');
 const server = express();
 
 server.get('/heroes', (req, res) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.send([
     { id: 11, name: 'Dr Nice from Server' },
     { id: 12, name: 'Narco from Server' },
