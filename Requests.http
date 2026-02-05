@@ -1,0 +1,39 @@
+@auth_header = YWRtaW46c3VwZXJzZWNyZXQ=
+
+### Unauthorized
+    GET localhost:8000/topsecret
+
+###
+GET localhost:8000/topsecret
+Authorization: Basic YWRtaW46c3VwZXJzZWNyZXQ=
+
+###
+GET localhost:8000/topsecret
+Authorization: Basic {{auth_header}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+POST localhost:8000/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "password"
+}
+
+> {% client.global.set("jwt_token", response.body.token); %}
+
+###
+GET localhost:8000/
+Authorization: Bearer {{jwt_token}}
