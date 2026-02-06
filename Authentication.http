@@ -1,0 +1,9 @@
+### GET request to example server
+GET localhost:8000/public
+
+###
+GET localhost:8000/top-secret
+
+###
+GET localhost:8000/top-secret
+Authorization: Basic YWRtaW46c3VwZXJzZWNyZXQ=   //admin:supersecret
